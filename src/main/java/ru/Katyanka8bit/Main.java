@@ -1,19 +1,41 @@
 package ru.Katyanka8bit;
 import java.io.File;
-import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
-    public static void main(String[] args)  {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        String path = args[0];
+        if (args.length == 0) {
+            showMenu();
+            System.exit(1);
+        } else if (args.length > 1) {
+            System.out.println("Введите один параметр");
+            System.exit(1);
+        } else if (args.length == 1) {
+            long timeStart = System.currentTimeMillis();
+            List<File> listPaths = FilePaths.getListPaths(path);
+            Map<String, List<String>> fileDuplicate = new HashMap<>();
+            startThread(listPaths, fileDuplicate);
+
+
+            long timeStop = System.currentTimeMillis();
+            System.out.println("Затрачено времени: " + (timeStop - timeStart) / 1000 + " сек.");
+            System.out.println("Очистим всего: " + FileSize.getSumFilesSize(fileDuplicate) + "Mb");
+
+        }
+    }
+
+    public static void showMenu() {
+        System.out.println("Введите параметр");
+
+    }
+
+    public static void startThread(List<File> listPaths, Map<String, List<String>> fileDuplicate) {
         ExecutorService threadExecutor = Executors.newFixedThreadPool(10);
-        long timeStart = System.currentTimeMillis();
-        List<File> listPaths = FilePaths.getPaths(sc.nextLine());
-        Map<String, List<String>> fileDuplicate = new HashMap<>();
-        for(File file : listPaths) {
+        for (File file : listPaths) {
             threadExecutor.submit(() -> {
                 String threadName = Thread.currentThread().getName();
                 System.out.println("Hello " + threadName);
@@ -34,9 +56,5 @@ public class Main {
             e.printStackTrace();
         }
 
-        long timeStop = System.currentTimeMillis();
-        System.out.println("Затрачено времени: " + (timeStop - timeStart) / 1000 + " сек.");
-        System.out.println("Очистим всего: " + FileSize.getSumFilesSize(fileDuplicate) + "Mb");
     }
-
 }
