@@ -1,0 +1,12 @@
+
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(²ßÎ÷úÿÿÿÿ8±‚ë¿“/
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¥åâ8…ö‚¼“/
+\
+java:S1118
+":Add a private constructor to hide the implicit public one.(º»ô†ûÿÿÿÿ8Æîôº“/
+f
+java:S2095"DUse try-with-resources or close this "Stream" in a "finally" clause.(áåš˜øÿÿÿÿ8ÀŸÌ¿“/
+H
+java:S1168"+Return an empty collection instead of null.(¥¹ï8•˜÷Œ–/
+H
+java:S1168"+Return an empty collection instead of null.(¥¹ï8•˜÷Œ–/
