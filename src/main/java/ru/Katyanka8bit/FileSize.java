@@ -7,10 +7,11 @@ import java.util.Map;
 public class FileSize {
     public static long getSumFilesSize(Map<String, List<String>> fileDuplicate) {
         final long[] sumFilesize = new long[1];
+        if (fileDuplicate==null) {
+            return 0;
+        }
         fileDuplicate.forEach((a, b) -> {
             if (b.size() > 1) {
-                System.out.println("Дубликаты:");
-                b.forEach(System.out::println);
                 long filesize = 0;
                 File file = new File(b.get(0));
                 filesize = file.length();

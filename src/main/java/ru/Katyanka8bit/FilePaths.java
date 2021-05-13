@@ -16,7 +16,6 @@ public class FilePaths {
                         .map(Path::toFile)
                         .collect(Collectors.toList());
             } catch (Exception e) {
-                System.out.println("Вы ввели неправильный путь, попробуйте снова");
                 return null;
             }
         }

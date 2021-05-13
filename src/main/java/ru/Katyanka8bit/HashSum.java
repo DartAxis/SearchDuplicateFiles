@@ -4,10 +4,15 @@ import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.math.BigInteger;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.security.MessageDigest;
 
 public class HashSum {
     public static String getHashSumFile(String path) {
+        if(!Files.exists(Paths.get(path))) {
+            return null;
+        }
         String output;
         int read;
         byte[] buffer = new byte[8192];
