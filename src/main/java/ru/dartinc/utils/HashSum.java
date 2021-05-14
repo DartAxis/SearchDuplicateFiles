@@ -34,4 +34,8 @@ public class HashSum {
         }
         return output;
     }
+
+    private HashSum(){
+        //private constructor
+    }
 }

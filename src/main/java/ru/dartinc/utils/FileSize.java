@@ -20,4 +20,7 @@ public class FileSize {
         });
         return sumFilesize[0] ;
     }
+    private FileSize(){
+        //private constructor
+    }
 }
