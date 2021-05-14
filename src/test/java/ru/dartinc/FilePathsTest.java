@@ -1,5 +1,7 @@
 package ru.dartinc;
 
+import ru.dartinc.utils.FilePaths;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class FilePathsTest {

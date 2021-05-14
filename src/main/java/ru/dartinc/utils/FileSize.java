@@ -1,4 +1,4 @@
-package ru.dartinc;
+package ru.dartinc.utils;
 
 import java.io.File;
 import java.util.List;

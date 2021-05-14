@@ -1,5 +1,9 @@
 package ru.dartinc;
 
+import ru.dartinc.utils.FilePaths;
+import ru.dartinc.utils.FileSize;
+import ru.dartinc.utils.HashSum;
+
 import java.io.File;
 import java.util.*;
 import java.util.concurrent.ExecutorService;

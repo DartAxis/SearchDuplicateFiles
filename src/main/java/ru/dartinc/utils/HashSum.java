@@ -1,4 +1,4 @@
-package ru.dartinc;
+package ru.dartinc.utils;
 
 import java.io.BufferedInputStream;
 import java.io.File;
