@@ -1,4 +1,4 @@
-package ru.Katyanka8bit;
+package ru.dartinc;
 
 import java.io.File;
 import java.util.*;

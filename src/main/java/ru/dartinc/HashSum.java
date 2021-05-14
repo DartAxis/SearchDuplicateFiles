@@ -1,4 +1,4 @@
-package ru.Katyanka8bit;
+package ru.dartinc;
 
 import java.io.BufferedInputStream;
 import java.io.File;

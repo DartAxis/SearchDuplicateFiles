@@ -1,4 +1,4 @@
-package ru.Katyanka8bit;
+package ru.dartinc;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
