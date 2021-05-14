@@ -7,10 +7,12 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
 public class FilePaths {
     public static List<File> getListPaths(String directory) {
         if (directory != null) {
-            try {
+
+            try{
                 return Files.walk(Paths.get(directory))
                         .filter(Files::isRegularFile)
                         .map(Path::toFile)
@@ -20,5 +22,8 @@ public class FilePaths {
             }
         }
         return null;
+    }
+    private FilePaths(){
+        //private constructor
     }
 }

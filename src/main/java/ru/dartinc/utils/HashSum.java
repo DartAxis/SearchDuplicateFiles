@@ -17,8 +17,7 @@ public class HashSum {
         int read;
         byte[] buffer = new byte[8192];
         File file = new File(path);
-        BufferedInputStream bufferedInputStream = null;
-        try { bufferedInputStream = new BufferedInputStream(new FileInputStream(file));
+        try(BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(file))){
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             while ((read = bufferedInputStream.read(buffer)) > 0) {
                 digest.update(buffer, 0, read);
@@ -29,11 +28,11 @@ public class HashSum {
 
         }
         catch (Exception e) {
-            e.printStackTrace( System.err );
             return null;
         }
         return output;
     }
+
 
     private HashSum(){
         //private constructor

@@ -6,7 +6,7 @@
 
     <groupId>ru.Katyanka8bit</groupId>
     <artifactId>SearchDuplicateFiles</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0-RELEASE</version>
 
     <name>duplicates</name>
     <description>Search duplicate files in directory</description>
@@ -16,6 +16,27 @@
         <java.version>1.8</java.version>
     </properties>
 
+    <developers>
+        <developer>
+            <id>DartAxis</id>
+            <name>Alexey Filatyev</name>
+            <email>filatyev.a.a@gmail.com</email>
+            <roles>
+                <role>PRODUCT OWNER</role>
+                <role>DEVELOPER</role>
+            </roles>
+        </developer>
+
+        <developer>
+            <id>Katyanka8bit</id>
+            <name>Ekaterina Sosedova</name>
+            <email>sosedovae.s@gmail.com</email>
+            <roles>
+                <role>DEVELOPER</role>
+            </roles>
+        </developer>
+    </developers>
+
     <build>
         <finalName>duplicates</finalName>
         <plugins>
@@ -24,8 +45,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
 
                 <configuration>
-                    <source>8</source>
-                    <target>8</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
 
